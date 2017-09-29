@@ -1,21 +1,34 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Hello from '@/components/Hello'
-import soyaine from '@/components/soyaine'
+import Home from '@/components/Home'
+import BI from '@/components/BI'
+import Video from '@/components/Video'
+import Admin from '@/components/Admin'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: Hello
+      name: 'Home',
+      component: Home
     },
     {
-      path: '/soyaine',
-      name: 'Soyaine',
-      component: soyaine
+      path: '/BI',
+      name: 'BI',
+      component: BI
+    },
+    {
+      path: '/Video',
+      name: 'Video',
+      component: Video
+    },
+    {
+      path: '/Admin',
+      name: 'Admin',
+      component: Admin
     }
   ]
 })
